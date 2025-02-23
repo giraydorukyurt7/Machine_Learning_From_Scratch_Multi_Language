@@ -17,14 +17,12 @@ X = []
 Y = []
 
 for i in range(len(dataset)):
-    X.append(dataset[i][0])
+    Y.append(dataset[i][0])
 for i in range(len(dataset)):
-    Y.append(dataset[i][1])
+    X.append(dataset[i][1])
 #Turn into strings into float in lists
-X = [float(x) for x in X]
 Y = [float(y) for y in Y]
-
-
+X = [float(x) for x in X]
 
 def test_train_split(X,Y,train_percentage):
     0.8
