@@ -6,6 +6,8 @@ def read_data(dir):
             line = line.strip()   #remove \n
             data = line.split(',')#split with ','
             dataset.append(data)
+        #print column names:
+        print(f"Columns:{dataset[0]}")
         del dataset[0] #delete column names
         return dataset
 
@@ -117,3 +119,20 @@ MSE,RMSE, RMSE_Percentage = mse(Y_test=y_test,
 print(f"MSE    : {MSE}")
 print(f"RMSE   : {RMSE}")
 print(f"RMSE % : {RMSE_Percentage}")
+
+# RESULTS:
+
+# Columns:['price', 'area']
+# Length of X: 545
+# Length of Y: 545
+# Length of X_train: 436
+# Length of y_train: 436
+# Length of X_test: 109
+# Length of y_test: 109
+# m:  449.19403573535936
+# b:  2435361.3861911963
+# y=mx+b
+# 449.19403573535936*x+2435361.3861911963
+# MSE    : 2637938770579.5483
+# RMSE   : 1624173.2575619968
+# RMSE % : 33.37031966505396
